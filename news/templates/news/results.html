@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <title>Results</title>
+        <style>
+            body{
+                background-color: #f8efef;
+                
+            }
+            h1 { color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 100px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; }
+            .title-word {
+  animation: color-animation 4s linear infinite;
+}
+li { color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 15px; font-weight: bold; letter-spacing: px; line-height: 1; text-align: justify; }
+.container {
+  display: grid;
+  place-items: center;  
+  text-align: center;
+  height: 100vh
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 8.5vw;
+  text-transform: uppercase;
+}
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+.title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+.searchbar{
+    height: 60px;
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 15px;
+    }
+
+
+            </style>
+    </head>
+    <body>
+        <br><br><br><br><br>
+        <h1>
+            <div>                
+                  <span class="title-word title-word-1">Results</span>
+                  <span class="title-word title-word-2">Are</span>
+                  <span class="title-word title-word-3">Out</span>                    
+              </div>
+        </h1>
+        <br><br>
+        <div>
+          <ul>
+            {% for task in tasks %}
+                <li>{{ task }}</li>
+                <br>
+            {% endfor %}
+        </ul>
+        </div>
+    </body>
+</html>
